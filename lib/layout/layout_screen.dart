@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
-import '../core/config/texts/text_styles.dart';
 import '../core/config/theme/colors_manager.dart';
+import '../pages/home/home_page.dart';
+import '../pages/mettings/mettings_page.dart';
+import '../pages/profile/profile_page.dart';
+import '../pages/quizes/quizes_page.dart';
+import '../pages/videos/videos_page.dart';
 import 'widgets/bottom_nav_bar_tab.dart';
 
 class LayoutScreen extends StatefulWidget {
@@ -19,7 +23,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
   @override
   void initState() {
     super.initState();
-    controller = PersistentTabController(initialIndex: 0);
+    controller = PersistentTabController(initialIndex: 2);
     //context.read<LayoutCubit>().controller = controller;
   }
 
@@ -31,68 +35,34 @@ class _LayoutScreenState extends State<LayoutScreen> {
         controller: controller,
         navBarHeight: 122.h,
         navBarOverlap: const NavBarOverlap.none(),
+        backgroundColor: ColorsManager.lightGrey,
         tabs: [
           bottomNavBarTab(
-            screen: Scaffold(
-              body: Center(
-                child: Text(
-                  "الرئيسية",
-                  style: TextStyles.font20BlackBold,
-                ),
-              ),
-            ),
+            screen: const HomePage(),
             iconPath: "assets/icons/home_unselected_icon.svg",
             inactiveIconPath: "assets/icons/home_unselected_icon.svg",
             title: "الرئيسية",
           ),
           bottomNavBarTab(
-            screen: Scaffold(
-              body: Center(
-                child: Text(
-                  "الفيديوهات",
-                  style: TextStyles.font20BlackBold,
-                ),
-              ),
-            ),
+            screen: const VideosPage(),
             iconPath: "assets/icons/videos_unselected_icon.svg",
             inactiveIconPath: "assets/icons/videos_unselected_icon.svg",
             title: "الفيديوهات",
           ),
           bottomNavBarTab(
-            screen: Scaffold(
-              body: Center(
-                child: Text(
-                  "الإختبارات",
-                  style: TextStyles.font20BlackBold,
-                ),
-              ),
-            ),
+            screen: QuizesPage(),
             iconPath: "assets/icons/exams_selected_icon.svg",
             inactiveIconPath: "assets/icons/exams_selected_icon.svg",
             title: "الإختبارات",
           ),
           bottomNavBarTab(
-            screen: Scaffold(
-              body: Center(
-                child: Text(
-                  "الإجتماعات",
-                  style: TextStyles.font20BlackBold,
-                ),
-              ),
-            ),
+            screen: const MettingsPage(),
             iconPath: "assets/icons/metting_unselected_icon.svg",
             inactiveIconPath: "assets/icons/metting_unselected_icon.svg",
             title: "الإجتماعات",
           ),
           bottomNavBarTab(
-            screen: Scaffold(
-              body: Center(
-                child: Text(
-                  "الحساب",
-                  style: TextStyles.font20BlackBold,
-                ),
-              ),
-            ),
+            screen: const ProfilePage(),
             iconPath: "assets/icons/profile_unselected_icon.svg",
             inactiveIconPath: "assets/icons/profile_unselected_icon.svg",
             title: "الحساب",
