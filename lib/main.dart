@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/config/theme/app_theme.dart';
 import 'features/layout/layout_screen.dart';
-import 'features/quiz_details/quiz_details_screen.dart';
+import 'features/quiz_details/presentation/quiz_details_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
