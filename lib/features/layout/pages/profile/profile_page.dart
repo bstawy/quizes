@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../core/config/texts/text_styles.dart';
+import '../../../../core/config/texts/text_styles.dart';
 
-class MettingsPage extends StatelessWidget {
-  const MettingsPage({
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({
     super.key,
   });
 
@@ -12,7 +12,7 @@ class MettingsPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-          "الإجتماعات",
+          "الحساب",
           style: TextStyles.font20BlackBold,
         ),
       ),

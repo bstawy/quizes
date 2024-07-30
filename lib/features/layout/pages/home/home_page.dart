@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/config/texts/text_styles.dart';
+import '../../../../core/config/texts/text_styles.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({

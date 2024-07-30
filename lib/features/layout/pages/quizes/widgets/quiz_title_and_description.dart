@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/config/texts/text_styles.dart';
+import '../../../../../core/config/texts/text_styles.dart';
 
 class QuizTitleAndDescription extends StatelessWidget {
   final String title;
