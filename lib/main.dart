@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/config/theme/app_theme.dart';
 import 'features/layout/layout_screen.dart';
+import 'features/quiz_details/quiz_details_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +25,11 @@ class MyApp extends StatelessWidget {
         title: 'Quizes',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightThemeData,
-        home: const LayoutScreen(),
+        initialRoute: LayoutScreen.routeName,
+        routes: {
+          LayoutScreen.routeName: (context) => const LayoutScreen(),
+          QuizDetailsScreen.routeName: (context) => const QuizDetailsScreen(),
+        },
       ),
     );
   }
