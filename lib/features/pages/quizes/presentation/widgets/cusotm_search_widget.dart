@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../core/config/texts/text_styles.dart';
-import '../../../../core/config/theme/colors_manager.dart';
-import '../../../../core/helpers/extensions/extensions.dart';
+import '../../../../../core/config/texts/text_styles.dart';
+import '../../../../../core/config/theme/colors_manager.dart';
+import '../../../../../core/helpers/extensions/extensions.dart';
 
 class CustomSearchWidget extends StatelessWidget {
   const CustomSearchWidget({super.key});
