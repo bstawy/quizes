@@ -35,6 +35,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
         controller: controller,
         navBarHeight: 122.h,
         navBarOverlap: const NavBarOverlap.none(),
+        backgroundColor: ColorsManager.lightGrey,
         tabs: [
           bottomNavBarTab(
             screen: const HomePage(),
@@ -49,7 +50,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
             title: "الفيديوهات",
           ),
           bottomNavBarTab(
-            screen: const QuizesPage(),
+            screen: QuizesPage(),
             iconPath: "assets/icons/exams_selected_icon.svg",
             inactiveIconPath: "assets/icons/exams_selected_icon.svg",
             title: "الإختبارات",
