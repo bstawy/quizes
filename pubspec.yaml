@@ -14,6 +14,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_bloc: ^8.1.6
   flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.0.10+1
   gap: ^3.0.1
   persistent_bottom_nav_bar_v2: ^5.2.3
 
@@ -27,3 +28,19 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/icons/
+  
+  fonts:
+    - family: Tajawal
+      fonts:
+        - asset: assets/fonts/Tajawal-Bold.ttf
+          style: normal
+          weight: 700
+
+        - asset: assets/fonts/Tajawal-Medium.ttf
+          style: normal
+          weight: 500
+
+        - asset: assets/fonts/Tajawal-Regular.ttf
+          style: normal
+          weight: 400
