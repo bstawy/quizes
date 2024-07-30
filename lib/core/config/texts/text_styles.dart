@@ -5,8 +5,15 @@ import '../theme/colors_manager.dart';
 import 'font_weight_helper.dart';
 
 class TextStyles {
-  static TextStyle font20BlackBold = TextStyle(
+  static TextStyle font20DarkGreyBold = TextStyle(
     color: ColorsManager.darkGrey,
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.bold,
+    fontFamily: 'Tajawal',
+  );
+
+  static TextStyle font20LightBlueGreyBold = TextStyle(
+    color: ColorsManager.lightBlueGrey,
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.bold,
     fontFamily: 'Tajawal',
@@ -14,6 +21,13 @@ class TextStyles {
 
   static TextStyle font16WhiteBold = TextStyle(
     color: Colors.white,
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.bold,
+    fontFamily: 'Tajawal',
+  );
+
+  static TextStyle font16DarkGreyBold = TextStyle(
+    color: ColorsManager.darkGrey,
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.bold,
     fontFamily: 'Tajawal',
