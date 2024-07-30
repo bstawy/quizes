@@ -5,9 +5,12 @@ import 'package:gap/gap.dart';
 import '../../core/config/texts/text_styles.dart';
 import '../../core/helpers/extensions/extensions.dart';
 import 'widgets/cusotm_search_widget.dart';
+import 'widgets/quiz_item_widget.dart';
 
 class QuizesPage extends StatelessWidget {
-  const QuizesPage({super.key});
+  QuizesPage({super.key});
+
+  final List<bool> quizesStatus = [true, false, true, false, true];
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +24,21 @@ class QuizesPage extends StatelessWidget {
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Gap(28.h),
             const CustomSearchWidget(),
+            Gap(16.h),
+            Expanded(
+              child: ListView.builder(
+                padding: EdgeInsetsDirectional.only(top: 20.h),
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return QuizItemWidget(quizStatus: quizesStatus[index])
+                      .setOnlyPadding(0, 9.h, 0, 0);
+                },
+              ),
+            ),
           ],
         ).setHorizontalPadding(36.w),
       ),
