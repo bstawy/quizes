@@ -26,7 +26,7 @@ class CustomAppBarWidget extends StatelessWidget
           const CustomBackButton(),
           Gap(18.w),
           Text(
-            "اختبار المعرفة العامة",
+            title,
             style: titleStyle ?? TextStyles.font16BlueGreyBold,
           ),
         ],
