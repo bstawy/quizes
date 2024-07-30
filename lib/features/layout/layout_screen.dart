@@ -3,14 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
 import '../../core/config/theme/colors_manager.dart';
-import 'pages/home/home_page.dart';
-import 'pages/mettings/mettings_page.dart';
-import 'pages/profile/profile_page.dart';
-import 'pages/quizes/quizes_page.dart';
-import 'pages/videos/videos_page.dart';
+import '../pages/home/home_page.dart';
+import '../pages/mettings/mettings_page.dart';
+import '../pages/profile/profile_page.dart';
+import '../pages/quizes/quizes_page.dart';
+import '../pages/videos/videos_page.dart';
 import 'widgets/bottom_nav_bar_tab.dart';
 
 class LayoutScreen extends StatefulWidget {
+  static const String routeName = 'layout';
   const LayoutScreen({super.key});
 
   @override

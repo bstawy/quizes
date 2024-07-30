@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/config/texts/text_styles.dart';
+import '../../../core/config/texts/text_styles.dart';
 
 class MettingsPage extends StatelessWidget {
   const MettingsPage({
@@ -13,7 +13,7 @@ class MettingsPage extends StatelessWidget {
       body: Center(
         child: Text(
           "الإجتماعات",
-          style: TextStyles.font20BlackBold,
+          style: TextStyles.font20DarkGreyBold,
         ),
       ),
     );

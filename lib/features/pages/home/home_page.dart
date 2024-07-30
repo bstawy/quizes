@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/config/texts/text_styles.dart';
+import '../../../core/config/texts/text_styles.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Text(
           "الرئيسية",
-          style: TextStyles.font20BlackBold,
+          style: TextStyles.font20DarkGreyBold,
         ),
       ),
     );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
-import 'quiz_info_widget.dart';
+import '../../../../core/widgets/quiz_info_widget.dart';
 import 'quiz_title_and_description.dart';
 import 'view_quiz_button.dart';
 

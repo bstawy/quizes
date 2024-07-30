@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../../core/config/texts/text_styles.dart';
-import '../../../../../core/config/theme/colors_manager.dart';
-import 'quiz_info_widget.dart';
+import '../../../../core/config/texts/text_styles.dart';
+import '../../../../core/config/theme/colors_manager.dart';
+import '../../../../core/widgets/quiz_info_widget.dart';
 import 'quiz_result_widget.dart';
 import 'quiz_title_and_description.dart';
 import 'view_quiz_button.dart';
