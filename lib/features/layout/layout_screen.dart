@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
@@ -6,7 +7,8 @@ import '../../core/config/theme/colors_manager.dart';
 import '../pages/home/home_page.dart';
 import '../pages/mettings/mettings_page.dart';
 import '../pages/profile/profile_page.dart';
-import '../pages/quizes/quizes_page.dart';
+import '../pages/quizes/cubit/quizes_cubit.dart';
+import '../pages/quizes/presentation/quizes_page.dart';
 import '../pages/videos/videos_page.dart';
 import 'widgets/bottom_nav_bar_tab.dart';
 
@@ -25,7 +27,12 @@ class _LayoutScreenState extends State<LayoutScreen> {
   void initState() {
     super.initState();
     controller = PersistentTabController(initialIndex: 2);
-    //context.read<LayoutCubit>().controller = controller;
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -51,7 +58,10 @@ class _LayoutScreenState extends State<LayoutScreen> {
             title: "الفيديوهات",
           ),
           bottomNavBarTab(
-            screen: QuizesPage(),
+            screen: BlocProvider<QuizesCubit>(
+              create: (context) => QuizesCubit(),
+              child: const QuizesPage(),
+            ),
             iconPath: "assets/icons/exams_selected_icon.svg",
             inactiveIconPath: "assets/icons/exams_selected_icon.svg",
             title: "الإختبارات",
