@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
-import '../../core/config/texts/text_styles.dart';
-import '../../core/helpers/extensions/extensions.dart';
+import '../../../core/config/texts/text_styles.dart';
+import '../../../core/helpers/extensions/extensions.dart';
 import 'widgets/cusotm_search_widget.dart';
 import 'widgets/quiz_item_widget.dart';
 
@@ -19,7 +19,7 @@ class QuizesPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text("الإختبارات").setHorizontalPadding(16.w),
-          titleTextStyle: TextStyles.font20BlackBold,
+          titleTextStyle: TextStyles.font20DarkGreyBold,
           forceMaterialTransparency: true,
         ),
         body: Column(

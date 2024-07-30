@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../core/config/texts/text_styles.dart';
+import '../../../core/config/texts/text_styles.dart';
 
-class VideosPage extends StatelessWidget {
-  const VideosPage({
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({
     super.key,
   });
 
@@ -12,8 +12,8 @@ class VideosPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-          "الفيديوهات",
-          style: TextStyles.font20BlackBold,
+          "الحساب",
+          style: TextStyles.font20DarkGreyBold,
         ),
       ),
     );

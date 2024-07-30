@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
-import '../../../core/config/texts/font_weight_helper.dart';
-import '../../../core/config/texts/text_styles.dart';
+import '../config/texts/font_weight_helper.dart';
+import '../config/texts/text_styles.dart';
 
 class QuizInfoWidget extends StatelessWidget {
   final String title;

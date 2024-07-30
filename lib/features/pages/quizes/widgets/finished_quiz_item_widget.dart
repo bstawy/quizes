@@ -2,44 +2,46 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
-import 'quiz_info_widget.dart';
+import '../../../../core/config/texts/text_styles.dart';
+import '../../../../core/config/theme/colors_manager.dart';
+import '../../../../core/widgets/quiz_info_widget.dart';
+import 'quiz_result_widget.dart';
 import 'quiz_title_and_description.dart';
 import 'view_quiz_button.dart';
 
-class UnfinishedQuizItemWidget extends StatelessWidget {
+class FinishedQuizItemWidget extends StatelessWidget {
   final String title;
   final String description;
+  final int score;
   final Duration duration;
-  final int questionsNumber;
 
-  const UnfinishedQuizItemWidget({
+  const FinishedQuizItemWidget({
     super.key,
     required this.title,
     required this.description,
+    required this.score,
     required this.duration,
-    required this.questionsNumber,
   });
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         QuizTitleAndDescription(title: title, description: description),
         Gap(24.h),
+        QuizResultWidget(score: score),
+        Gap(24.h),
         Row(
           children: [
             QuizInfoWidget(
-              title: "الأسئلة",
-              info: questionsNumber.toString(),
-              imagePath: "assets/images/questions_image.png",
-            ),
-            Gap(18.w),
-            QuizInfoWidget(
-              title: "مدة الإختبار",
-              info: "${duration.inMinutes} دقيقة",
-              imagePath: "assets/images/unfinished_duration_image.png",
+              title: "${duration.inMinutes} دقيقة",
+              info: "إعادة المحاولة",
+              imagePath: "assets/images/finished_duration_image.png",
+              titleStyle: TextStyles.font14LightBlueGreyBold.copyWith(
+                color: ColorsManager.teal,
+              ),
+              infoStyle: TextStyles.font14LightBlueGreyBold,
             ),
             const Spacer(),
             const ViewQuizButton(),
