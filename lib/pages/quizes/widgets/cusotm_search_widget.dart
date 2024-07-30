@@ -7,9 +7,7 @@ import '../../../core/config/theme/colors_manager.dart';
 import '../../../core/helpers/extensions/extensions.dart';
 
 class CustomSearchWidget extends StatelessWidget {
-  const CustomSearchWidget({
-    super.key,
-  });
+  const CustomSearchWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +25,9 @@ class CustomSearchWidget extends StatelessWidget {
         hintStyle: TextStyles.font16BlueGreyMedium.copyWith(
           color: ColorsManager.blueGrey.withOpacity(0.62),
         ),
-        suffixIcon: SvgPicture.asset("assets/icons/search_icon.svg")
-            .setHorizontalPadding(12.w),
+        suffixIcon: SvgPicture.asset(
+          "assets/icons/search_icon.svg",
+        ).setHorizontalPadding(16.w),
         fillColor: ColorsManager.lightTeal,
         filled: true,
         enabledBorder: OutlineInputBorder(
