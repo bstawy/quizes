@@ -19,10 +19,38 @@ class TextStyles {
     fontFamily: 'Tajawal',
   );
 
+  static TextStyle font18OrangeBold = TextStyle(
+    color: ColorsManager.orange,
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.bold,
+    fontFamily: 'Tajawal',
+  );
+
+  static TextStyle font16BlueGreyBold = TextStyle(
+    color: ColorsManager.blueGrey,
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.bold,
+    fontFamily: 'Tajawal',
+  );
+
   static TextStyle font16BlueGreyMedium = TextStyle(
     color: ColorsManager.blueGrey,
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.medium,
+    fontFamily: 'Tajawal',
+  );
+
+  static TextStyle font14GreyRegular = TextStyle(
+    color: ColorsManager.grey,
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    fontFamily: 'Tajawal',
+  );
+
+  static TextStyle font14LightBlueGreyBold = TextStyle(
+    color: ColorsManager.lightBlueGrey,
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.bold,
     fontFamily: 'Tajawal',
   );
 }
