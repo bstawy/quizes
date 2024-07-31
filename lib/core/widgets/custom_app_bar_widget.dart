@@ -32,6 +32,7 @@ class CustomAppBarWidget extends StatelessWidget
         ],
       ).setOnlyPadding(0, 0, 16.w, 0),
       centerTitle: false,
+      forceMaterialTransparency: true,
     );
   }
 

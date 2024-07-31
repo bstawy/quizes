@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../core/helpers/extensions/extensions.dart';
 import '../../../../models/quiz_model.dart';
-import '../../../../quiz_details/quiz_details_screen.dart';
+import '../../../../quiz_details/presentation/quiz_details_screen.dart';
 
 class ViewQuizButton extends StatelessWidget {
   final QuizModel quiz;
