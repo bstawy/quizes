@@ -5,7 +5,7 @@ class QuizModel {
   final String title;
   final String description;
   final int totalQuestions;
-  final int score;
+  int score;
   final Duration duration;
   final List<QuestionModel> questions;
   final bool isCompleted;

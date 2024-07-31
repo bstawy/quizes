@@ -23,7 +23,7 @@ class QuizDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     QuizModel quiz = ModalRoute.of(context)!.settings.arguments as QuizModel;
     print(quiz);
-    context.read<QuizDetailsCubit>().setQuestions(quiz.questions);
+    context.read<QuizDetailsCubit>().setQuiz(quiz);
 
     return Directionality(
       textDirection: TextDirection.rtl,
