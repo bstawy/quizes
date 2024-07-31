@@ -16,7 +16,7 @@ class QuizesCubit extends Cubit<QuizesState> {
         id: 1,
         title: 'أختبار المعرفة العامة',
         description: 'غطي مجموعة متنوعة من الأسئلة في مجالات متعددة',
-        totalQuestions: '3',
+        totalQuestions: 3,
         score: 10,
         duration: const Duration(minutes: 30),
         questions: [
@@ -48,7 +48,7 @@ class QuizesCubit extends Cubit<QuizesState> {
         id: 2,
         title: 'إختبار مادة الرياضيات الأساسية',
         description: 'أسئلة متنوعة فى الرياضيات',
-        totalQuestions: '10',
+        totalQuestions: 10,
         score: 0,
         duration: const Duration(minutes: 10),
         questions: [
