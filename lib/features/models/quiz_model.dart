@@ -8,7 +8,7 @@ class QuizModel {
   int score;
   final Duration duration;
   final List<QuestionModel> questions;
-  final bool isCompleted;
+  bool isCompleted;
 
   QuizModel({
     required this.id,

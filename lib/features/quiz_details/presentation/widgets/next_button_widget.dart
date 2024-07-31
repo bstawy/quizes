@@ -37,7 +37,7 @@ class NextButtonWidget extends StatelessWidget {
             ),
           ),
           child: MaterialButton(
-            onPressed: context.read<QuizDetailsCubit>().quizFinished
+            onPressed: context.read<QuizDetailsCubit>().quiz!.isCompleted
                 ? () {
                     final QuizModel quiz =
                         context.read<QuizDetailsCubit>().quiz!;

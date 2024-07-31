@@ -10,7 +10,6 @@ class QuizDetailsCubit extends Cubit<QuizDetailsState> {
   QuizModel? quiz;
   List<QuestionModel>? questions;
   bool timesUp = false;
-  bool quizFinished = false;
   int answeredQuestions = 0;
   int correctAnswers = 0;
 
@@ -63,8 +62,8 @@ class QuizDetailsCubit extends Cubit<QuizDetailsState> {
 
   void finishAllQuestions() {
     if (answeredQuestions == questions!.length) {
-      quizFinished = true;
       quiz!.score = correctAnswers;
+      quiz!.isCompleted = true;
       emit(QuizDetailsFinishedAllQuestions());
     }
   }
