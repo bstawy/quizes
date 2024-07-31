@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../models/question_model.dart';
+import '../../models/quiz_model.dart';
 
 part 'quiz_details_state.dart';
 
 class QuizDetailsCubit extends Cubit<QuizDetailsState> {
+  QuizModel? quiz;
   List<QuestionModel>? questions;
   bool timesUp = false;
   bool quizFinished = false;
@@ -14,8 +16,9 @@ class QuizDetailsCubit extends Cubit<QuizDetailsState> {
 
   QuizDetailsCubit() : super(QuizDetailsInitial());
 
-  void setQuestions(List<QuestionModel> questions) {
-    this.questions = questions;
+  void setQuiz(QuizModel quiz) {
+    this.quiz = quiz;
+    questions = quiz.questions;
     emit(QuizDetailsLoaded());
   }
 
@@ -61,6 +64,7 @@ class QuizDetailsCubit extends Cubit<QuizDetailsState> {
   void finishAllQuestions() {
     if (answeredQuestions == questions!.length) {
       quizFinished = true;
+      quiz!.score = correctAnswers;
       emit(QuizDetailsFinishedAllQuestions());
     }
   }

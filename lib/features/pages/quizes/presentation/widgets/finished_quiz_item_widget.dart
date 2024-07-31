@@ -25,7 +25,10 @@ class FinishedQuizItemWidget extends StatelessWidget {
           description: quiz.description,
         ),
         Gap(24.h),
-        QuizResultWidget(score: quiz.score),
+        QuizResultWidget(
+          totalQuestions: quiz.totalQuestions,
+          score: quiz.score,
+        ),
         Gap(24.h),
         Row(
           children: [

@@ -5,6 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/config/texts/text_styles.dart';
 import '../../../../core/config/theme/colors_manager.dart';
 import '../../../../core/helpers/extensions/extensions.dart';
+import '../../../models/quiz_model.dart';
+import '../../../success/success_screen.dart';
 import '../../logic/quiz_details_cubit.dart';
 
 class NextButtonWidget extends StatelessWidget {
@@ -37,7 +39,9 @@ class NextButtonWidget extends StatelessWidget {
           child: MaterialButton(
             onPressed: context.read<QuizDetailsCubit>().quizFinished
                 ? () {
-                    // TODO: navigate to quiz result screen
+                    final QuizModel quiz =
+                        context.read<QuizDetailsCubit>().quiz!;
+                    context.pushNamed(SuccessScreen.routeName, arguments: quiz);
                   }
                 : null,
             minWidth: double.infinity,

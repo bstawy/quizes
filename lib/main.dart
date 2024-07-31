@@ -7,6 +7,7 @@ import 'core/helpers/app_bloc_observer.dart';
 import 'features/layout/layout_screen.dart';
 import 'features/quiz_details/logic/quiz_details_cubit.dart';
 import 'features/quiz_details/presentation/quiz_details_screen.dart';
+import 'features/success/success_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
                 create: (context) => QuizDetailsCubit(),
                 child: const QuizDetailsScreen(),
               ),
+          SuccessScreen.routeName: (context) => const SuccessScreen(),
         },
       ),
     );

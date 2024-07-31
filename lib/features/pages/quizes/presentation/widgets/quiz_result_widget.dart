@@ -6,10 +6,12 @@ import '../../../../../core/config/texts/text_styles.dart';
 import '../../../../../core/config/theme/colors_manager.dart';
 
 class QuizResultWidget extends StatelessWidget {
+  final int totalQuestions;
   final int score;
 
   const QuizResultWidget({
     super.key,
+    required this.totalQuestions,
     required this.score,
   });
 
@@ -46,7 +48,7 @@ class QuizResultWidget extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: '12 / ',
+                      text: '$totalQuestions / ',
                       style: TextStyles.font18OrangeBold.copyWith(
                         color: ColorsManager.blueGrey,
                       ),
